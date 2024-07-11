@@ -1,0 +1,908 @@
+* {
+  list-style-type: none;
+  box-sizing: border-box;
+  font-size: 10px;
+  padding: 0;
+  margin: 0;
+  font-family: monospace;
+}
+
+/* Header */
+header span {
+  font-size: 4em;
+}
+
+header {
+  text-align: center;
+  margin-top: 13.5em;
+  border-bottom: 0.5em solid black;
+  background: linear-gradient(
+    to right,
+    blue 33.33%,
+    white 33.33%,
+    white 66.66%,
+    red 66.66%
+  );
+  padding: 5em;
+}
+
+/* Header */
+
+/* Navigation */
+
+nav {
+  display: flex;
+  justify-content: center;
+  padding: 4em 3em 4em 3em;
+  flex-wrap: wrap;
+  background-color: black;
+  width: 100%;
+  border-bottom: 5px solid black;
+  z-index: 1000;
+  top: 0;
+  transition: opacity 0.3s;
+  position: fixed;
+}
+
+nav:hover {
+  opacity: 0.5;
+}
+
+nav ul {
+  text-align: center;
+  justify-content: center;
+  gap: 3em;
+  flex-flow: wrap;
+  display: flex;
+}
+
+nav ul li {
+  text-align: center;
+  border-radius: 15px;
+  outline: 0.3em solid white;
+  padding: 1.5em;
+}
+
+nav ul li a {
+  display: inline-block;
+  font-size: 2em;
+  width: 100%;
+}
+
+a:link {
+  color: white;
+  text-decoration: none;
+}
+
+a:visited,
+a:active,
+a:link {
+  font-weight: 700;
+  color: white;
+}
+
+a:hover {
+  font-weight: 700;
+  color: red;
+}
+/* Navigation */
+
+/* General attributes */
+
+p {
+  font-size: 2em;
+}
+
+section p {
+  text-align: center;
+  color: black;
+  margin-right: 5em;
+}
+
+.container h2 {
+  text-align: center;
+  font-size: 3.5em;
+}
+
+section {
+  margin-bottom: 15em;
+  display: flex;
+}
+
+.container section figure figcaption cite {
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2em;
+}
+
+.container section figure figcaption {
+  display: block; /* Make the figcaption a block element */
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+
+/* General attributes */
+
+/* Container */
+
+.container {
+  margin: 5em;
+}
+
+.container p {
+  margin-top: 3em;
+  font-weight: 700;
+  line-height: 2em;
+  text-align: center;
+}
+
+.container h2 {
+  margin: 2em 0em 1em 0em;
+}
+
+/* Container */
+
+/* Media queries */
+
+.home-content section figure img,
+.culture-content section figure img,
+.around-content section figure img,
+.history-content section figure img,
+.food-content section figure img,
+.shopping-content section figure img,
+.attractions-content section figure img,
+.travel-content section figure img {
+  margin: 0 auto;
+  display: block;
+}
+
+@media (width < 1860px) {
+  .paris-images figure img,
+  .art-images figure img,
+  .pottery-images figure img,
+  .accomodations-images figure img,
+  .health-images figure img {
+    width: 416px;
+    height: 234px;
+  }
+
+  .container .paris figure figcaption,
+  .container .art figure figcaption,
+  .container .pottery figcaption,
+  .container .accomodations figcaption,
+  .container .health figcaption {
+    font-size: 0.7em;
+  }
+
+  body .attractions-content .slider .slide img {
+    width: 854px;
+    height: 480px;
+  }
+
+  body .attractions-content .slider .slide figcaption {
+    font-size: 0.7em;
+  }
+
+  .history-images figure img,
+  .markets-images figure img,
+  .tipping-images figure img {
+    width: 625px;
+    height: 352px;
+  }
+}
+
+@media (width < 1718px) {
+  .euro-images figure img {
+    width: 640px;
+    height: 360px;
+  }
+
+  .slider button.next {
+    margin-right: 1em;
+  }
+}
+
+@media (width < 1610px) {
+  body .attractions-content .slider .slide img {
+    width: 640px;
+    height: 360px;
+  }
+}
+
+@media (max-width: 1530px) {
+  nav ul {
+    gap: 1em;
+    flex-wrap: wrap;
+  }
+
+  nav ul li {
+    padding: 1em;
+    flex: 1 1 22%;
+  }
+
+  nav ul li:nth-child(n + 5) {
+    flex: 1 1 18%;
+  }
+
+  nav ul li a {
+    font-size: 1.75em;
+  }
+
+  .home-content section figure,
+  .culture-content section figure,
+  .around-content section figure,
+  .history-content section figure,
+  .food-content section figure,
+  .attractions-content section figure,
+  .shopping-content section figure,
+  .travel-content section figure {
+    margin-top: 5em;
+  }
+
+  .home-content section figure img,
+  .culture-content section figure img,
+  .around-content section figure img,
+  .history-content section figure img,
+  .food-content section figure img,
+  .attractions-content section figure img,
+  .shopping-content section figure img,
+  .travel-content section figure img {
+    width: 640px;
+    height: 360px;
+  }
+
+  .history .history-images figure img,
+  .markets .markets-images figure img,
+  .tipping .tipping-images figure img {
+    width: 320px;
+    height: 180px;
+  }
+
+  body #firstVal,
+  body #secondVal {
+    font-size: 1.5em;
+    padding: 1em;
+  }
+
+  body .flex-currency select option {
+    padding: 1em;
+    font-size: 1em;
+  }
+
+  body .flex-currency select {
+    font-size: 1.5em;
+    padding: 1em;
+  }
+
+  body #dd {
+    font-size: 1.5em;
+  }
+}
+
+@media (width < 1430px) {
+  .paris .paris-images,
+  .art .art-images,
+  .pottery .pottery-images,
+  .accomodations .accomodations-images,
+  .health .health-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 5em 0 0 0;
+  }
+
+  .paris-images figure,
+  .art-images figure,
+  .pottery-images figure,
+  .accomodations-images figure,
+  .health-images figure {
+    flex: 1 1 calc(50% - 10px);
+    box-sizing: border-box;
+  }
+
+  .currency-converter {
+    margin: 0;
+  }
+
+  .euro {
+    flex-direction: column;
+    display: flex;
+  }
+
+  .currency-converter h3 {
+    margin: 2em auto 1em auto;
+    text-align: center;
+  }
+
+  .flex-currency {
+    margin: 0em auto auto auto;
+  }
+}
+
+@media (width < 1333px) {
+  body .attractions-content .slider .slide img {
+    width: 426px;
+    height: 240px;
+  }
+
+  .slider button.next,
+  .slider button.prev {
+    margin: 0;
+    font-size: 1.5em;
+  }
+
+  body .attractions-content .slider .slide figcaption {
+    width: 50%;
+  }
+
+  .home-content section,
+  .culture-content section,
+  .around-content section,
+  .history-content section,
+  .food-content section,
+  .shopping-content section,
+  .attractions-content section,
+  .shopping-content section,
+  .travel-content section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .home-content section p,
+  .culture-content section p,
+  .around-content section p,
+  .history-content section p,
+  .food-content section p,
+  .shopping-content section p,
+  .attractions-content section p,
+  .shopping-content section p,
+  .travel-content section p {
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .home-content section figure,
+  .culture-content section figure,
+  .around-content section figure,
+  .history-content section figure,
+  .food-content section figure,
+  .attractions-content section figure,
+  .shopping-content section figure,
+  .travel-content section figure {
+    margin-top: 3em;
+  }
+
+  .home-content section div,
+  .culture-content section div,
+  .around-content section div,
+  .history-content section div,
+  .food-content section div,
+  .shopping-content section div,
+  .attractions-content section div,
+  .shopping-content section div,
+  .travel-content section div {
+    margin: auto;
+    justify-content: center;
+  }
+}
+
+@media (width < 1130px) {
+  nav {
+    padding: 3em;
+  }
+
+  nav ul li a {
+    font-size: 1.5em;
+  }
+
+  nav ul li {
+    padding: 0.5em;
+  }
+
+  header {
+    margin-top: 12em;
+  }
+}
+
+@media (width < 1050px) {
+  .history .history-images,
+  .markets .markets-images,
+  .tipping .tipping-images {
+    gap: 3em;
+    padding: 0;
+    margin: 4em 0em 0em 0em;
+    flex-direction: column;
+  }
+}
+
+@media (width < 1000px) {
+  .copyright .copyright-text,
+  .footer .footer-nav ul li a {
+    font-size: 1.7em;
+  }
+
+  .copyright .copyright-text {
+    text-align: center;
+    width: 30%;
+  }
+
+  .footer .footer-nav ul li a:hover {
+    font-size: 1.7em;
+    border: none;
+    color: red;
+  }
+
+  body .attractions-content .slider .slide img {
+    width: 320px;
+    height: 180px;
+  }
+}
+
+@media (width < 780px) {
+  .faq .faq-header {
+    font-size: 2em;
+  }
+
+  .faq #faqSelect {
+    font-size: 1.3em;
+  }
+
+  .faq p {
+    font-size: 1.3em;
+  }
+
+  body .attractions-content .slider {
+    position: relative;
+    width: fit-content;
+    margin: 5em auto;
+  }
+
+  body .attractions-content .slider button {
+    position: absolute;
+    top: 0;
+    margin: 0em 2em 0em 2em;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+  }
+  header {
+    margin-top: 14.75em;
+  }
+  .home-content section p,
+  .culture-content section p,
+  .around-content section p,
+  .history-content section p,
+  .food-content section p,
+  .shopping-content section p,
+  .attractions-content section p,
+  .shopping-content section p,
+  .travel-content section p {
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .home-content section figure img,
+  .culture-content section figure img,
+  .around-content section figure img,
+  .history-content section figure img,
+  .food-content section figure img,
+  .attractions-content section figure img,
+  .shopping-content section figure img,
+  .travel-content section figure img {
+    width: 426px;
+    height: 240px;
+  }
+
+  body .currency-converter h3 {
+    font-size: 2em;
+  }
+
+  body .flex-currency {
+    flex-direction: column;
+    display: flex;
+    gap: 1em;
+  }
+
+  body .flex-currency select {
+    padding: 1em 5.25em 1em 5.25em;
+  }
+
+  body .flex-currency input {
+    text-align: center;
+  }
+
+  body #dd {
+    display: none;
+  }
+}
+
+@media (width < 570px) {
+  .home-content section figure img,
+  .culture-content section figure img,
+  .around-content section figure img,
+  .history-content section figure img,
+  .food-content section figure img,
+  .attractions-content section figure img,
+  .shopping-content section figure img,
+  .travel-content section figure img,
+  .travel-content section figure img {
+    width: 320px;
+    height: 180px;
+  }
+
+  header {
+    margin-top: 20em;
+  }
+
+  .home-content section figure,
+  .culture-content section figure,
+  .around-content section figure,
+  .history-content section figure,
+  .food-content section figure,
+  .attractions-content section figure,
+  .shopping-content section figure,
+  .travel-content section figure {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  body #footer h2 {
+    text-align: center;
+    font-size: 2em;
+  }
+
+  .copyright .copyright-text {
+    text-align: center;
+    width: 40%;
+  }
+}
+
+/* Media queries */
+
+/* Image Groundwork */
+
+.history-content .history,
+.travel-content .tipping,
+.shopping-content .markets,
+.shopping-content .paris,
+.shopping-content .art,
+.shopping-content .pottery,
+.travel-content .accomodations,
+.travel-content .health {
+  display: flex;
+  flex-direction: column;
+}
+
+.paris-images,
+.art-images,
+.pottery-images,
+.markets-images,
+.accomodations-images,
+.health-images {
+  margin: 5em auto auto auto;
+  display: flex;
+}
+
+.history-content .history {
+  margin-bottom: 10em;
+}
+
+.paris-images,
+.art-images,
+.pottery-images,
+.accomodations-images,
+.health-images {
+  gap: 20px;
+}
+
+.history-images,
+.tipping-images,
+.markets-images {
+  gap: 50px;
+  margin: 5em auto auto auto;
+  display: flex;
+}
+
+/* Image Groundwork */
+
+/* Currency Convert travel.html */
+
+#firstVal,
+#secondVal {
+  font-size: 1.75em;
+}
+
+.flex-currency select option {
+  font-size: 1em;
+}
+
+.flex-currency select {
+  padding: 1em;
+  font-size: 1.75em;
+}
+
+.flex-currency input {
+  padding: 1em;
+  font-size: 1em;
+}
+
+.currency-converter {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10em;
+}
+
+.currency-converter h3 {
+  font-size: 3em;
+  margin-bottom: 2em;
+}
+
+.currency-converter > * {
+  display: flex;
+}
+
+.flex-currency {
+  display: flex;
+  align-items: center;
+}
+
+.flex-currency p {
+  margin: 0;
+  font-size: 1.75em;
+  display: flex;
+  align-items: center;
+}
+
+#dd {
+  font-size: 1.75em;
+  margin: 0 10px; /* Add margin around the dd element */
+}
+
+/* Currency Convert travel.html */
+
+/* The Alps Image Slider attractions.html */
+
+.slider {
+  position: relative;
+  width: 75%;
+  margin: auto;
+}
+
+button.prev,
+button.next {
+  position: absolute;
+  top: 50%;
+
+  background-color: black;
+  color: white;
+  border: none;
+  font-size: 2em;
+  border-radius: 15px;
+  padding: 1em;
+  cursor: pointer;
+}
+
+button.prev {
+  left: 0;
+}
+
+button.next {
+  margin-right: 2em;
+  right: 0;
+}
+
+.content-alps {
+  flex-direction: column;
+  display: flex;
+}
+
+.attractions-content .slider .slide {
+  margin-top: 5em;
+}
+
+.attractions-content .slider .slide img {
+  width: 1024px;
+  height: 576px;
+}
+
+/* The Alps Image Slider attractions.html */
+
+/* Countdown Timer history.html */
+
+#countdown-timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5em 0em 15em 0em;
+}
+
+#countdown-timer span {
+  line-height: 0.25em;
+  font-size: 1.5em;
+  border-bottom: 2px solid black;
+}
+
+.timer-element {
+  margin: 0 10px;
+  font-size: 20px;
+}
+
+.bastille h3 {
+  font-size: 3em;
+}
+
+.bastille p {
+  text-align: left;
+}
+
+/* Countdown Timer history.html */
+
+/* Footer */
+
+#footer {
+  color: white;
+  background-color: black;
+  padding: 5em;
+}
+
+#footer h2 {
+  margin-bottom: 1em;
+  font-size: 3.5em;
+}
+
+.footer {
+  justify-content: space-between;
+  display: flex;
+}
+
+.copyright {
+  height: auto;
+  width: 100%;
+  position: relative;
+}
+
+.copyright-text {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 0;
+  padding: 1em;
+  text-align: right;
+}
+
+.footer-nav {
+  display: flex;
+}
+
+.footer-nav ul li {
+  margin-bottom: 0.5em;
+}
+
+.footer-nav ul li a {
+  font-size: 2em;
+  color: white;
+}
+
+.footer-nav ul li a:hover {
+  font-size: 2.2em;
+  border-bottom: 0.25em solid red;
+  color: red;
+}
+
+/* Footer */
+
+/* FAQ faq.html */
+
+.faq-answer {
+  display: none;
+}
+
+.faq-header {
+  text-align: center;
+  margin-top: 2em;
+  font-size: 3.5em;
+}
+
+#faqSelect {
+  display: flex;
+  justify-content: center;
+  margin: 3em auto 5em auto;
+  font-size: 2em;
+  padding: 1em;
+}
+
+#faqSelect option {
+  font-size: 1em;
+}
+
+.faq .container div p {
+  width: 80%;
+  margin: auto;
+  text-align: left;
+}
+
+/* FAQ faq.html */
+
+/* CSS Comments */
+
+/*
+  Reset and Global Styles:
+  - Resetting styles for all elements to ensure consistent appearance.
+*/
+
+/*
+  Header:
+  - Centering header content with text-align: center.
+  - Adding a bottom border for visual separation.
+  - Using a linear gradient to represent the flag of France.
+*/
+
+/*
+  Navigation:
+  - Using flexbox for flexible layout and centering items.
+  - Flex-wrap set to wrap to manage items on smaller screens.
+  - Styling for navigation links and their hover effects.
+*/
+
+/*
+  General Attributes:
+  - Setting paragraph font size to 2em for readability and consistency.
+  - Centering paragraphs within sections and adjusting text color.
+*/
+
+/*
+  Container:
+  - Applying margins and specific stylings for the container class.
+*/
+
+/*
+  Media Queries:
+  - Responsive adjustments based on viewport width and device sizes.
+  - Tailored styles for different screen resolutions to ensure readability and layout consistency.
+*/
+
+/*
+  Image Groundwork:
+  - Stylings specific to image sections within various content areas.
+  - Managing gaps, margins, and alignments for image displays.
+*/
+
+/*
+  Currency Convert travel.html:
+  - Specific styles for elements related to currency conversion on the travel.html page.
+  - Adjustments for input fields, select options, and layout within the currency converter section.
+*/
+
+/*
+  The Alps Image Slider attractions.html:
+  - Styles for slider functionality and image display in the attractions.html page.
+  - Positioning and sizing adjustments for slider controls and slide content.
+*/
+
+/*
+  Countdown Timer history.html:
+  - Styling for the countdown timer feature on the history.html page.
+  - Centering elements, adjusting margins, and defining font sizes for timer components.
+*/
+
+/*
+  Footer:
+  - Stylings for footer section, including background color and text alignment.
+  - Adjustments for footer navigation links and their hover effects.
+*/
+
+/*
+  FAQ faq.html:
+  - Styles specific to the FAQ page (faq.html) including header styling and FAQ answer display.
+  - Layout adjustments for FAQ selection dropdown and answer paragraphs.
+*/
+
+/* End of CSS Comments */
